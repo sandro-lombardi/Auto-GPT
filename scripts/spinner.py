@@ -17,7 +17,7 @@ class Spinner:
     def spin(self):
         """Spin the spinner"""
         while self.running:
-            sys.stdout.write(next(self.spinner) + " " + self.message + "\r")
+            sys.stdout.write(f"{next(self.spinner)} {self.message}" + "\r")
             sys.stdout.flush()
             time.sleep(self.delay)
             sys.stdout.write('\b' * (len(self.message) + 2))

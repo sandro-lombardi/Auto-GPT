@@ -21,8 +21,6 @@ def call_ai_function(function, args, description, model=None):
         {"role": "user", "content": args},
     ]
 
-    response = create_chat_completion(
+    return create_chat_completion(
         model=model, messages=messages, temperature=0
     )
-
-    return response
